@@ -1,40 +1,44 @@
-
-.menu{
-	font-family:Verdana;	
-	margin-top: -280px;
-	background-image:url('TecWeb/css/images/Header/menu/fundomenu.png');width: 103%;height: 82px;margin-top: -300px;margin-left: -30px;
-
+*{
+	box-sizing: border-box;
 }
-
-
-
+body{
+	background-color:#F5F5F5;
+	margin:0px;
+}
+header{
+	background-image:url('TecWeb/css/images/Header/menu/fundomenu.png');
+	width: 100%;
+	height: 82px;
+	padding: 0.5%;
+	display:flex;
+	
+	}
+.menu{
+	font-family:Verdana;
+	width:55%;
+	margin-left: 5%;
+}
 ul{
-	margin:300px 200px;
+	position:relative;
 	padding:0;
 	display:flex; 
 	
 	 }
-
-
 ul li{
 	text-align: center;
-	margin-top: 25px;
 	list-style: none;
 	padding:4px 15px;
 }
-
-
-
 ul li a {
 	text-align: center;
 	text-decoration: none;
 	text-transform: capitalize;
-	font-size:18px;
+	font-size:0.8rem;
+	font-weight:bold;
 	position:relative;
-	color: #262626
+	color: #262626;
 
 }
-
 ul li a:before{
 	content: '';
 	width:0;
@@ -45,27 +49,110 @@ ul li a:before{
 	left:0;
 	transition: .5s;
 }
-
 ul li:hover a:before{
 	width:80%;
 	display: block;
 
 }
-
-
 /*LOGOMARCA*/
-.logo {background-image:url('TecWeb/css/images/Header/menu/impacta_logo.png');width: 100px;height: 48px;margin-top:-60px;margin-left: 30px;}
-
+.logo {
+	width: 6%;
+	height: 70px;
+	display: flex;
+	margin-left: 2%;
+	position:relative;
+	
+}
+input[name="usuario"], input[name="senha"]{
+	width:37%;
+    border: 2px solid ;
+	border-radius: 2px;
+	-webkit-transition: 0.5s;
+	
+}
+input[name="usuario"]:focus, input[name="senha"]:focus{
+	border: 2px solid #555;
+	
+}
+input[type=button], input[type=submit], input[type=reset] {
+	background-color: #c2c2a3;
+	border: outset 1px;
+	border-radius: 2px;
+	width: 17%;
+	text: #FFF;
+	font-weight: bold;
+	
+}
+.login{
+	height:70px;
+	width:30%;
+	font-size:0.71rem;
+	font-family: Verdana;
+	color:#FFF;
+	text-shadow: 1px 1px 1px #000;
+	font-weight: bold;
+	float: right;
+}
+a.login2{
+	color: #000;
+	text-decoration: none;
+	text-shadow: none;
+	
+}
+a.login2:hover{
+	color: #9C9C9C;
+	size: 1rem;
+	
+}
+.container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  
+}
 
 /* BANNER PROPAGANDA */
-
-.banner {background-image:url('TecWeb/css/images/cursos-online.jpg');width: 101%; height: 500px;margin-top: -6px;)}
-
-.box {background-image:url(TecWeb/css/images/box/box.png);width: 436px ; height: 325px; margin-left: 150px;	}
-.linebox1 {background-image:url(TecWeb/css/images/box/linebox1.png);width: 436px ; height: 4px; margin-left: 150px;margin-top:-327px;	}
-.box2 {background-image:url(TecWeb/css/images/box/box2.png);width: 431px ; height: 567px; margin-left: 760px;}
-.linebox2 {background-image:url(TecWeb/css/images/box/linebox2.png);width: 432px ; height: 4px; margin-left: 759px;margin-top:-568px;}
-
+.banner {
+width: 100%;
+height: 400px;
+margin-top: -16px
+}
+.box {
+background-image:url(TecWeb/css/images/box/box.png);
+width: 436px ;
+ height: 325px;
+ margin-left: 150px;
+ }
+.linebox1 {
+background-image:url(TecWeb/css/images/box/linebox1.png);
+width: 436px ;
+height: 4px;
+margin-left: 150px;
+margin-top:-327px;
+ }
+.box2 {
+background-image:url(TecWeb/css/images/box/box2.png);
+width: 431px ;
+height: 567px; 
+margin-left: 760px;
+}
+.linebox2 {
+background-image:url(TecWeb/css/images/box/linebox2.png);width: 432px ; 
+height: 4px; 
+margin-left: 759px;
+margin-top:-568px;
+}
 h2 {
 	font-family: Arial;
 	font-size: 0.8em;
@@ -76,7 +163,6 @@ h2 {
 
 
 }
-
 h1{
 	font-family: Helvetica;
 	font-size: 1.5em;
@@ -98,14 +184,13 @@ h3{
 	color: #FFF;
 	text-align: center;
 	background-image:url(TecWeb/css/images/Footer/rodape.png); 
-	width:103%;
-	height: 82px;
+	width:100%;
+	height: 50px;
 	margin-top: 650px;
 
 
 
 }
-
 table {
 
 	text-transform:	capitalize;
@@ -121,11 +206,20 @@ table {
 	height: 152px;
 
 }
-
 .grade{
 	background-image:url(TecWeb/fundocurso.png);
 	width:700px;
 	height: 600px;
+}
+@media only screen and (max-width: 768px)
+{
+header{
+display:inline;
+}
 
+.menu{
+width: 100%;
+}
 
+}
 
